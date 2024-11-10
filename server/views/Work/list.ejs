@@ -1,0 +1,52 @@
+<%- include ../Partials/header.ejs%>
+<%- include ../Partials/main_nav.ejs%>
+
+<main class="container">
+    <div class="row">
+        <div class="offset-md-1 col-md-10">
+            <h1><%= title %></h1>
+            <br>
+            <a href="/worklist/add" class="btn btn-primary btn-sm mb-3">
+                <i class="fas fa-plus-circle"></i> Add Schedule
+            </a>
+            <table class="table table-bordered table-hover table-sm">
+                <thead>
+                    <tr>
+                        <th class="text-center col-2">Employee</th>
+                        <th class="text-center col-1">Sun</th>
+                        <th class="text-center col-1">Mon</th>
+                        <th class="text-center col-1">Tue</th>
+                        <th class="text-center col-1">Wed</th>
+                        <th class="text-center col-1">Thu</th>
+                        <th class="text-center col-1">Fri</th>
+                        <th class="text-center col-1">Sat</th>
+                        <th class="text-center col-2">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(let count = 0; count < WorkList.length; count++) { %>
+                    <tr>
+                        <td class="text-center"><%= WorkList[count].Name %></td>
+                        <td class="text-center"><%= WorkList[count].Sun %></td>
+                        <td class="text-center"><%= WorkList[count].Mon %></td>
+                        <td class="text-center"><%= WorkList[count].Tue %></td>
+                        <td class="text-center"><%= WorkList[count].Wed %></td>
+                        <td class="text-center"><%= WorkList[count].Thu %></td>
+                        <td class="text-center"><%= WorkList[count].Fri %></td>
+                        <td class="text-center"><%= WorkList[count].Sat %></td>
+                        <td class="text-center">
+                            <a href="/worklist/edit/<%= WorkList[count]._id %>" class="btn btn-primary btn-sm d-inline-flex mr-1">
+                                <i class="fas fa-pencil-alt"></i> Edit
+                            </a>
+                            <a href="/worklist/delete/<%= WorkList[count]._id %>" class="btn btn-danger btn-sm d-inline-flex">
+                                <i class="fas fa-trash-alt"></i> Delete
+                            </a>
+                        </td>
+                    </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+<%- include ../Partials/footer.ejs%>
