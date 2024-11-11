@@ -1,5 +1,14 @@
-<%- include Partials/header.ejs%>
-<%- include Partials/main_nav.ejs%>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-<%- include Partials/footer.ejs%>
+<%- include Partials/header.ejs %>
+<body class="bg-light" style="background: -moz-linear-gradient(top, rgb(26, 67, 128) 0%, white 100%);">
+    <div class="container" style="background-image: url(/Assets/images/background.jpg); background-size: cover; background-position: center; position: relative;">
+        <%- include Partials/main_nav.ejs %>
+
+        <div class="row justify-content-center align-items-center min-vh-100" style="position: relative; z-index: 1;">
+                <h1><%= title %></h1>
+        </div>
+    
+    
+    
+    </div>
+
+<%- include Partials/footer.ejs %>
