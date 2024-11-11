@@ -1,11 +1,12 @@
-<%- include Partials/header.ejs %>
+<%- include('Partials/header.ejs') %>
+
 <body class="bg-light" style="background: -moz-linear-gradient(top, rgb(26, 67, 128) 0%, white 100%);">
     <div class="container" style="background-image: url(/Assets/images/background.jpg); background-size: cover; background-position: center; position: relative;">
-        <%- include Partials/main_nav.ejs %>
+        <%- include('Partials/main_nav.ejs') %>
 
         <div class="row justify-content-center align-items-center min-vh-100" style="position: relative; z-index: 1;">
             <div class="col-md-4 text-center">
-                <img src="/Assets/images/logo.jpg" alt="Logo" style="margin-top: 60px; width: 200px; height: 200px; border-radius: 50%;">
+                <img src="/Assets/images/logo.jpg" alt="Logo" style=" border: 6px solid rgb(12, 34, 61); margin-top: 60px; width: 200px; height: 200px; border-radius: 50%;">
             </div>
 
             <div class="col-md-8">
@@ -14,12 +15,12 @@
                     <h3>
                         We provide a seamless, efficient work scheduling solution designed to simplify workforce management. Our platform allows teams to create, view, and adjust schedules with ease, ensuring smooth coordination and maximizing productivity. Whether you're managing shifts or tracking availability, our tools support businesses of all sizes to keep operations running smoothly.
                     </h3>
+
+                    <a href="/worklist" class="btn mt-4" style="background-color: rgb(12, 34, 61); color: white; padding: 15px 30px; font-size: 20px; border-radius: 5px;">GO TO SCHEDULE</a>
                 </div>
             </div>
         </div>
-    
-    
-    
     </div>
 
-<%- include Partials/footer.ejs %>
+    <%- include('Partials/footer.ejs') %>
+</body>

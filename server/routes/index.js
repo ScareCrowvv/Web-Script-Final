@@ -10,12 +10,6 @@ router.get('/home', function(req, res, next) {
 router.get('/aboutus', function(req, res, next) {
   res.render('aboutus', { title: 'About us' });
 });
-router.get('/products', function(req, res, next) {
-  res.render('products', { title: 'Products' });
-});
-router.get('/service', function(req, res, next) {
-  res.render('service', { title: 'Service' });
-});
 router.get('/contactus', function(req, res, next) {
   res.render('contactus', { title: 'Contact Us' });
 });

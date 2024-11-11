@@ -8,11 +8,10 @@
         <div class="row justify-content-center align-items-center min-vh-100" style="position: relative; z-index: 1;">
             <div class="col-md-10">
                 <br>
-                <!-- Button aligned to the left using inline style -->
-                <a href="/worklist/add" class="btn btn-primary btn-sm mb-3" style="display: inline-block; text-align: left;">
+                <a href="/worklist/add" class="btn btn-sm mb-3" style="display: inline-block; text-align: left; background-color: rgb(12, 34, 61); color: white;">
                     <i class="fas fa-plus-circle"></i> Add Schedule
                 </a>
-                <table class="table table-bordered table-hover table-sm">
+                <table class="table table-bordered table-hover table-sm" style="border: 3px solid rgb(0, 0, 0); border-radius: 5px;">
                     <thead>
                         <tr>
                             <th class="text-center col-2">Employee</th>
@@ -38,11 +37,11 @@
                             <td class="text-center"><%= WorkList[count].Fri %></td>
                             <td class="text-center"><%= WorkList[count].Sat %></td>
                             <td class="text-center">
-                                <a href="/worklist/edit/<%= WorkList[count]._id %>" class="btn btn-primary btn-sm d-inline-flex mr-1">
-                                    <i class="fas fa-pencil-alt"></i> Edit
+                                <a href="/worklist/edit/<%= WorkList[count]._id %>" class="btn btn-sm d-inline-flex mr-1" style="background-color: rgb(12, 34, 61); color: white;">
+                                    <i class="fas fa-pencil-alt"></i>
                                 </a>
-                                <a href="/worklist/delete/<%= WorkList[count]._id %>" class="btn btn-danger btn-sm d-inline-flex">
-                                    <i class="fas fa-trash-alt"></i> Delete
+                                <a href="/worklist/delete/<%= WorkList[count]._id %>" class="btn btn-sm d-inline-flex" style="background-color: rgb(248, 24, 24); color: white;">
+                                    <i class="fas fa-trash-alt"></i>
                                 </a>
                             </td>
                         </tr>
