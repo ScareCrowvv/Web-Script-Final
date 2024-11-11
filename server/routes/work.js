@@ -19,17 +19,6 @@ try{
         })
     }
     });
-
-router.get('/', async (req, res, next) => {
-    try {
-        const WorkList = await Work.find();
-        res.render('index', { title: 'Home', WorkList: WorkList });
-    } catch (err) {
-        console.error(err);
-        res.render('index', { error: 'Error loading the work schedule.' });
-    }
-});
-
 router.get('/add',async(req,res,next)=>{
     try{
         res.render('Work/add',{
