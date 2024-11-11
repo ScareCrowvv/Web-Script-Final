@@ -1,1 +1,1 @@
-module.exports={"URI":"mongodb://127.0.0.1:27017/WorkLib"}
+module.exports={"URI":"mongodb+srv://jacobbryan:Rebel2016@cluster0.hyam1.mongodb.net/"}
