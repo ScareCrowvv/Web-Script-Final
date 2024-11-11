@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top"  style="background-color: rgb(12, 34, 61);">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">Final Project</a>
+      <a class="navbar-brand" href="/">DJD Work Scheduling</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -12,7 +12,7 @@
             <% } else {%>
               <a class="nav-link" href="/home">
             <% } %>  
-            <i class="fa-solid fa-house-chimney-user"></i> Home</a>
+            <i class="fa-solid fa-house"></i> Home</a>
           </li>
           <li class="nav-item">
             <% if(title=="About us") { %>
@@ -23,28 +23,12 @@
               <i class="fa-solid fa-circle-info"></i> AboutUs</a>
           </li>
           <li class="nav-item">
-            <% if(title=="Products") { %>
-              <a class="nav-link active" href="/products">
-            <% } else {%>
-              <a class="nav-link" href="/products">
-            <% } %>    
-              <i class="fa-brands fa-elementor"></i> Products</a>
-          </li>
-          <li class="nav-item">
-            <% if(title=="Service") { %>
-              <a class="nav-link active" href="/service">
-            <% } else {%> 
-              <a class="nav-link" href="/service">
-            <% } %>  
-                <i class="fa-solid fa-gears"></i> Service</a>
-          </li>
-          <li class="nav-item">
             <% if(title=="Work") { %>
               <a class="nav-link active" href="/worklist">
             <% } else {%>
               <a class="nav-link" href="/worklist">
             <% } %>  
-            <i class="fa-solid fa-book"></i> Work</a>
+            <i class="fa-solid fa-briefcase"></i> Schedule</a>
           </li>
           <li class="nav-item"></li>
           <% if(title=="Contact Us") { %>
