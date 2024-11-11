@@ -8,16 +8,16 @@ router.get('/home', function(req, res, next) {
   res.render('index', { title: 'Home' });
 });
 router.get('/aboutus', function(req, res, next) {
-  res.render('index', { title: 'About us' });
+  res.render('aboutus', { title: 'About us' });
 });
 router.get('/products', function(req, res, next) {
-  res.render('index', { title: 'Products' });
+  res.render('products', { title: 'Products' });
 });
 router.get('/service', function(req, res, next) {
-  res.render('index', { title: 'Service' });
+  res.render('service', { title: 'Service' });
 });
 router.get('/contactus', function(req, res, next) {
-  res.render('index', { title: 'Contact Us' });
+  res.render('contactus', { title: 'Contact Us' });
 });
 
 module.exports = router;
