@@ -1,3 +1,4 @@
+// immediately invoked function expression
 
 (function(){
     function start(){
