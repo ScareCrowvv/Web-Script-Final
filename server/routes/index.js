@@ -7,11 +7,8 @@ router.get('/', function(req, res, next) {
 router.get('/home', function(req, res, next) {
   res.render('index', { title: 'Home' });
 });
-router.get('/aboutus', function(req, res, next) {
-  res.render('aboutus', { title: 'About us' });
-});
-router.get('/contactus', function(req, res, next) {
-  res.render('contactus', { title: 'Contact Us' });
+router.get('/add', (req, res) => {
+    res.render('Work/add', { title: 'Add' }); 
 });
 
 module.exports = router;
