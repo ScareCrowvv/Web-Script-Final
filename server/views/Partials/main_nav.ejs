@@ -16,9 +16,44 @@
           </li>
           <li class="nav-item">
             <% if(title=="Add") { %>
-              <a class="nav-link active" href="/worklist/add">
+              <a class="nav-link active" href="/add">
             <% } else {%> 
-              <a class="nav-link" href="/worklist/add">
+              <a class="nav-link" href="/add">
+            <% } %>  
+            <i class="fa-regular fa-calendar-plus"></i> Create</a>
+          </li>
+          <li class="nav-item">
+            <% if(title=="Work") { %>
+              <a class="nav-link active" href="/worklist">
+            <% } else {%>
+              <a class="nav-link" href="/worklist">
+            <% } %>  
+            <i class="fa-solid fa-briefcase"></i> Schedule</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top"  style="background-color: rgb(12, 34, 61);">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">DJD Work Scheduling</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <% if(title=="Home") { %>
+              <a class="nav-link active" href="/home">
+            <% } else {%>
+              <a class="nav-link" href="/home">
+            <% } %>  
+            <i class="fa-solid fa-house"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <% if(title=="Add") { %>
+              <a class="nav-link active" href="/add">
+            <% } else {%> 
+              <a class="nav-link" href="/add">
             <% } %>  
             <i class="fa-regular fa-calendar-plus"></i> Create</a>
           </li>
