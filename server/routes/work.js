@@ -1,6 +1,15 @@
 var express = require('express');
 var router = express.Router();
 let mongoose = require('mongoose');
+
+function requireAuth(req,res,next){
+    if(!req.isAuthenticated()){
+        return res.redirect('/login');
+
+    }
+    next();
+}
+
 let Work = require('../model/work');
 const work = require('../model/work');
 let workController = require('../controllers/work.js')
@@ -10,6 +19,7 @@ try{
     const WorkList = await Work.find();
     res.render('Work/list',{
         title:'Work',
+        displayName: req.user?req.user.displayName:'',
         WorkList:WorkList
     })}
     catch(err){
@@ -22,7 +32,8 @@ try{
 router.get('/add',async(req,res,next)=>{
     try{
         res.render('Work/add',{
-            title: 'Add Work'
+            title: 'Add Work',
+            displayName: req.user?req.user.displayName:''
         })
     }
     catch(err)
@@ -46,7 +57,7 @@ router.post('/add',async(req,res,next)=>{
             "Sat": req.body.Sat
         });
         Work.create(newWork).then(()=>{
-            res.redirect('/worklist');
+            res.redirect('/workslist');
         })
     }
     catch(err)
@@ -64,6 +75,7 @@ router.get('/edit/:id',async(req,res,next)=>{
         res.render('Work/edit',
             {
                 title:'Edit Work',
+                displayName: req.user?req.user.displayName:'',
                 Work:workToEdit
             }
         )
@@ -89,7 +101,7 @@ router.post('/edit/:id', async (req, res, next) => {
             "Sat": req.body.Sat
         });
         Work.findByIdAndUpdate(id, updatedWork).then(() => {
-            res.redirect('/worklist');
+            res.redirect('/workslist');
         });
     } catch (err) {
         console.error(err);
@@ -102,7 +114,7 @@ router.get('/delete/:id',async(req,res,next)=>{
     try{
         let id=req.params.id;
         Work.deleteOne({_id:id}).then(()=>{
-            res.redirect('/worklist')
+            res.redirect('/workslist')
         })
     }
     catch(error){
