@@ -16,6 +16,18 @@ router.get('/home', function(req, res, next) {
     displayName: req.user ? req.user.displayName:'' });
 });
 
+router.get('/aboutus', function(req, res, next) {
+  res.render('aboutus', { 
+    title: 'About Us',
+    displayName: req.user ? req.user.displayName:'' });
+});
+
+router.get('/contactus', function(req, res, next) {
+  res.render('contactus', { 
+    title: 'Contact Us',
+    displayName: req.user ? req.user.displayName:'' });
+});
+
 router.get('/login',function(req,res,next){
   if(!req.user)
   {
