@@ -15,11 +15,6 @@ router.get('/home', function(req, res, next) {
     title: 'Home',
     displayName: req.user ? req.user.displayName:'' });
 });
-router.get('/aboutus', function(req, res, next) {
-  res.render('aboutus', { 
-    title: 'aboutus',
-    displayName: req.user ? req.user.displayName:'' });
-});
 
 router.get('/aboutus', function(req, res, next) {
   res.render('aboutus', { 
